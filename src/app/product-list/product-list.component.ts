@@ -2,19 +2,22 @@ import { Component } from '@angular/core';
 
 import { products } from '../products';
 
+import { Game } from '../game';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
   products = products;
 
+  game = new Game('title1', 123);
+
   share() {
-    window.alert('The product has been shared!');
+    window.alert(this.game.identify());
   }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
