@@ -17,6 +17,10 @@ export class ProductListComponent {
   share() {
     window.alert(this.game.identify());
   }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
+  }
 }
 
 /*
